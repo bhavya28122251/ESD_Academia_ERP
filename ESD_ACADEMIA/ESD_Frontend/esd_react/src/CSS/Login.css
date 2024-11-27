@@ -1,0 +1,34 @@
+/* Overall page styling */
+.login-page {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: #f7f9fc; /* Subtle background color */
+}
+
+/* Left side styling */
+.left-side {
+  flex: 1; /* Takes up half the space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6f42c1; /* Purple background for contrast */
+  padding: 20px;
+}
+
+.side-image {
+  max-width: 70%; /* Ensure the image scales well */
+  max-height: 70%; /* Prevent overflow */
+  border-radius: 10px;
+  width:60%;
+  height:60% /* Optional: Rounded corners */
+}
+
+/* Right side styling */
+.right-side {
+  flex: 1; /* Takes up half the space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
