@@ -52,7 +52,7 @@ public class SecurityConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         CorsRegistration corsRegistration = registry.addMapping("/api/v1/**")
-                .allowedOrigins("http://localhost:3000") // Allow requests from React app
+                .allowedOrigins("http://localhost:3001") // Allow requests from React app
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);

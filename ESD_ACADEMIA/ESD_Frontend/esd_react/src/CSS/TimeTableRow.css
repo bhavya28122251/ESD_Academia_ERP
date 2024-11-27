@@ -9,6 +9,13 @@
   
   .lecture-row .col {
     flex: 1;
-    text-align: center;
+    text-align: left;
+    /* text-align: center; */
+  }
+
+  .row{
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;;
   }
   

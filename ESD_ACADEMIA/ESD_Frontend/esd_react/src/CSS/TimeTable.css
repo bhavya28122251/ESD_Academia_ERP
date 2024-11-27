@@ -1,19 +1,41 @@
 .timetable-container {
   margin: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  /* padding: 10px; */
+  /* border: 1px solid #ccc; */
   border-radius: 8px;
+  width:50%;
+  margin-left:25%;
+  margin-top:5%;
 }
 
 .day-section {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .day-header {
   background-color: grey;
   color: white;
   padding: 10px;
-  font-weight: bold;
-  text-align: center;
+  font-weight: bold;  
   border-radius: 4px;
+  /* margin-top: 10px; */
+  text-align: left;
+  padding:10px;
+  margin:0px;
 }
+/* display: flex;
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px; */
+
+    h1 {
+      text-align: center;        /* Centers the heading */
+      font-size: 36px;           /* Increases the font size */
+      /* font-family:'Courier New', Courier, monospace;  Sets a clean, modern font */
+      color: #333;               /* Sets a dark color for the text */
+      margin: 20px 0;            /* Adds space above and below the heading */
+      text-transform: uppercase; /* Makes the text uppercase */
+      letter-spacing: 1px;       /* Adds some spacing between letters */
+    }

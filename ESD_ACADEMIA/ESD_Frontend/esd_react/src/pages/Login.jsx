@@ -12,12 +12,12 @@ function Login({ onLoginSuccess }) {
   const navigate = useNavigate();
   const { email, setEmail, password, setPassword, error, handleLogin } = useLogin(onLoginSuccess, navigate);
 
-  useEffect(() => {
-    const token = getTokenFromLocalStorage();
-    if (token) {
-      navigate("/timetable");
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   const token = getTokenFromLocalStorage();
+  //   if (token) {
+  //     navigate("/timetable");
+  //   }
+  // }, [navigate]);
 
   return (
     <div className="login-page">
