@@ -5,10 +5,15 @@ import TimeTable from './pages/TimetableDisplay';
 import Students from "./pages/StudentsDisplay";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+const onLoginSuccess = (data) => {
+  console.log("Login successful:", data);
+  
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
+    element: <div><Login onLoginSuccess={onLoginSuccess} /></div>,
   },
   {
     path: "/TimeTable",

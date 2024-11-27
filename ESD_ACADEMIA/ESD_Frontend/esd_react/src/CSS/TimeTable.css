@@ -1,28 +1,19 @@
-.table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .header {
-    background-color: #f0f0f0; /* Greyish white */
-    text-align: center;
-    font-weight: bold;
-    border: 1px solid #ccc;
-  }
-  
-  .cell {
-    background-color: #007bff; /* Blue */
-    border: 1px solid #ccc;
-    height: 60px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cell:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    cursor: pointer;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
+.timetable-container {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.day-section {
+  margin-bottom: 20px;
+}
+
+.day-header {
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+}
