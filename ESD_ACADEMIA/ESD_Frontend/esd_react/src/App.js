@@ -1,26 +1,26 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Login from "./pages/Login";
+import React from 'react';
+import './App.css';
+import Login from './pages/Login';
 import TimeTable from './pages/TimetableDisplay';
-import Students from "./pages/StudentsDisplay";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Students from './pages/StudentsDisplay';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const onLoginSuccess = (data) => {
   console.log("Login successful:", data);
-  
 };
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div><Login onLoginSuccess={onLoginSuccess} /></div>,
+    element: <Login onLoginSuccess={onLoginSuccess} />,
+    index: true,
   },
   {
     path: "/TimeTable",
     element: <TimeTable />,
   },
   {
-    path: "/",
+    path: "/course/:courseId/students",
     element: <Students />,
   },
 ]);
@@ -28,8 +28,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      
-     <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </div>
   );
 }

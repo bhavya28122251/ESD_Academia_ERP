@@ -13,10 +13,10 @@
 }
 
 .day-header {
-  background-color: grey;
-  color: white;
+  background-color: rgb(183, 182, 182);
+  color: rgb(13, 0, 0);
   padding: 10px;
-  font-weight: bold;  
+  font-weight: 700;  
   border-radius: 4px;
   /* margin-top: 10px; */
   text-align: left;

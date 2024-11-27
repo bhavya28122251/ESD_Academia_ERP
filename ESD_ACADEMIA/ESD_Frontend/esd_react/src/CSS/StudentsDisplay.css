@@ -1,0 +1,22 @@
+.container {
+    max-width: 800px;
+    text-align: center;
+    
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6f42c1;
+    color:white;
+    /* font-weight: bold; */
+    font-size: large;
+    padding: 10px;
+  }
+
+  
+  
+  .text-center {
+    text-align: center;
+  }
