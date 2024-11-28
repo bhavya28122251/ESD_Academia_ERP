@@ -1,34 +1,31 @@
-/* Overall page styling */
 .login-page {
   display: flex;
-  height: 100vh; /* Full viewport height */
-  background-color: #f7f9fc; /* Subtle background color */
+  height: 100vh;
+  background: linear-gradient(to right, #f0f4fc, #dbe4f5); /* Soft blue gradient */
 }
 
-/* Left side styling */
 .left-side {
-  flex: 1; /* Takes up half the space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #6f42c1; /* Purple background for contrast */
+  background: #4a90e2; /* Blue shade for contrast */
+  color: #fff;
   padding: 20px;
 }
 
 .side-image {
-  max-width: 70%; /* Ensure the image scales well */
-  max-height: 70%; /* Prevent overflow */
-  border-radius: 10px;
-  width:60%;
-  height:60% /* Optional: Rounded corners */
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px; /* Slightly rounded edges */
 }
 
-/* Right side styling */
 .right-side {
-  flex: 1; /* Takes up half the space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1); /* Adds subtle depth */
 }
-

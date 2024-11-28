@@ -1,22 +1,93 @@
-.container {
-    max-width: 800px;
-    text-align: center;
-    
-  }
-  
-  .list-group-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #6f42c1;
-    color:white;
-    /* font-weight: bold; */
-    font-size: large;
-    padding: 10px;
-  }
+/* Global Styling */
+body {
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-  
-  
-  .text-center {
-    text-align: center;
-  }
+/* Header Styling */
+.header {
+  background: linear-gradient(90deg, #2e8b57, #4682b4); /* Green-Blue gradient */
+  color: #fff;
+  padding: 20px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 48px;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header .underline {
+  width: 150px;
+  height: 5px;
+  background-color: #ffd700; /* Gold */
+  margin: 10px auto 0;
+}
+
+/* Container Styling */
+.container {
+  margin: 30px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4682b4;
+  margin-bottom: 20px;
+}
+
+/* Student List Styling */
+.students-list {
+  padding: 10px;
+  border: 1px solid #4682b4;
+  border-radius: 10px;
+}
+
+.student-item {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-item:nth-child(odd) {
+  background-color: #fff; /* Alternate row color */
+}
+
+.student-roll {
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+.student-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.student-email {
+  font-style: italic;
+  color: #666;
+}
+
+.no-students {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 20px;
+}

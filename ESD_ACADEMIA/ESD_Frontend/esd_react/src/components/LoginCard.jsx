@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../CSS/LoginCard.css"; // Importing the CSS file
+import "../CSS/LoginCard.css"; // Ensure the path is correct
 
 function LoginCard({ email, password, setEmail, setPassword, error, handleSubmit }) {
   return (
@@ -9,30 +9,33 @@ function LoginCard({ email, password, setEmail, setPassword, error, handleSubmit
           <div className="card-body">
             <h3 className="card-title text-center mb-4">Faculty Login</h3>
             
-            <div className="mb-3">
+            <div className="form-group">
               <input
                 type="email"
                 id="email"
-                className="form-control"
+                className="form-control email-input"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="mb-3">
+
+            <div className="form-group">
               <input
                 type="password"
                 id="password"
-                className="form-control"
+                className="form-control password-input"
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button type="submit" className="btn btn-primary w-100">
+
+            <button type="submit" className="btn btn-primary submit-btn w-100">
               Login
             </button>
-            {error && <div className="alert alert-danger mt-3">{error}</div>}
+
+            {error && <div className="alert alert-danger error-alert mt-3">{error}</div>}
           </div>
         </div>
       </form>

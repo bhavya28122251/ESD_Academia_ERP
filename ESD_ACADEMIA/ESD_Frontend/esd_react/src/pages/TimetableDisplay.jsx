@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { fetchTimetable } from "../util/TTutil";
-import TimeTableRow from "../components/TimeTableRow";
-import "../CSS/TimeTable.css";
-import Logo from "../components/Navbar";
+import React, { useEffect, useState } from 'react';
+import { fetchTimetable } from '../util/TTutil';
+import TimeTableRow from '../components/TimeTableRow';
+import '../CSS/TimeTable.css';
+import Logout from '../components/Logout';
 
 const TimeTable = () => {
   const [timetableData, setTimetableData] = useState([]);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const loadTimetable = async () => {
@@ -16,7 +16,7 @@ const TimeTable = () => {
           setTimetableData(data);
         }
       } catch (err) {
-        setError("Failed to fetch timetable.");
+        setError('Failed to fetch timetable.');
       }
     };
 
@@ -35,18 +35,23 @@ const TimeTable = () => {
   }, {});
 
   return (
-    <div className="timetable-container">
-      <Logo />
-      <h1>Time Table</h1>
-      {Object.entries(groupedData).map(([day, lectures]) => (
-        <div key={day} className="day-section">
-          <div className="day-header">{`Day ${day}`}</div>
-          {lectures.map((lecture, index) => (
-            <TimeTableRow key={index} lecture={lecture} />
-          ))}
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="header">
+        <h1>Faculty Timetable</h1>
+        <div className="underline"></div>
+        <Logout />
+      </div>
+      <div className="timetable-container">
+        {Object.entries(groupedData).map(([day, lectures]) => (
+          <div key={day} className="day-section">
+            <div className="day-header">{`Day ${day}`}</div>
+            {lectures.map((lecture, index) => (
+              <TimeTableRow key={index} lecture={lecture} />
+            ))}
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
