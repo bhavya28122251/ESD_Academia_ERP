@@ -1,41 +1,107 @@
-.timetable-container {
-  margin: 20px;
-  /* padding: 10px; */
-  /* border: 1px solid #ccc; */
-  border-radius: 8px;
-  width:50%;
-  margin-left:25%;
-  margin-top:5%;
+/* General Page Styling */
+body {
+  font-family: 'Poppins', sans-serif; /* Modern font for elegance */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ece9e6, #ffffff); /* Light gradient */
+  color: #333;
 }
 
+/* Timetable Container */
+.timetable-container {
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 30px;
+  border-radius: 12px;
+  width: 70%;
+  background-color: #ffffff; /* White card background */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deep shadow for depth */
+  transition: transform 0.3s ease;
+}
+
+.timetable-container:hover {
+  transform: scale(1.02); /* Subtle zoom effect on hover */
+}
+
+/* Heading Styling */
+h1 {
+  text-align: center;
+  font-size: 42px; /* Bigger font size for impact */
+  font-family: 'Montserrat', sans-serif; /* Clean, modern font */
+  color: #6a1b9a; /* Vibrant purple */
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Wider letter spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Day Section Styling */
 .day-section {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  border-left: 4px solid #6a1b9a; /* Accent border for each section */
+  padding-left: 10px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .day-header {
-  background-color: rgb(183, 182, 182);
-  color: rgb(13, 0, 0);
-  padding: 10px;
-  font-weight: 700;  
-  border-radius: 4px;
-  /* margin-top: 10px; */
+  background: linear-gradient(to right, #6a1b9a, #8e24aa); /* Gradient for day header */
+  color: #ffffff;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 6px;
+  margin-bottom: 10px;
   text-align: left;
-  padding:10px;
-  margin:0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
-/* display: flex;
-    background-color: purple;
-    color: white;
-    padding: 10px;
-    border-radius: 4px;
-    margin-top: 10px; */
 
-    h1 {
-      text-align: center;        /* Centers the heading */
-      font-size: 36px;           /* Increases the font size */
-      /* font-family:'Courier New', Courier, monospace;  Sets a clean, modern font */
-      color: #333;               /* Sets a dark color for the text */
-      margin: 20px 0;            /* Adds space above and below the heading */
-      text-transform: uppercase; /* Makes the text uppercase */
-      letter-spacing: 1px;       /* Adds some spacing between letters */
-    }
+/* Row Styling */
+.timetable-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3e5f5; /* Light purple background */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timetable-row:hover {
+  background-color: #ede7f6; /* Slightly darker on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+/* Error Message Styling */
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timetable-container {
+    width: 90%; /* Expand to fit smaller screens */
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .day-header {
+    font-size: 16px;
+  }
+
+  .timetable-row {
+    flex-direction: column; /* Stack rows on smaller screens */
+    align-items: flex-start;
+  }
+}
+
+

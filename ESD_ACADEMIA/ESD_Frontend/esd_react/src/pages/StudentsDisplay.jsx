@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/StudentsDisplay.css'; // Import custom CSS
 
 const StudentsDisplay = () => {
-  const { courseId } = useParams(); // Access the courseId from the route
+  const { courseId } = useParams(); 
+  //const {courseCode}=useParams;
   const students = useStudentsDetails(courseId);
 
   // Filter out null or undefined students
@@ -13,12 +14,13 @@ const StudentsDisplay = () => {
 
   return (
     <div className="container mt-5">
+      
       <h1 className="text-center mb-4">Students Enrolled in Course {courseId}</h1>
       {validStudents.length > 0 ? (
         <div className="list-group cont">
           {validStudents.map((student) => (
             <div key={student.rollNumber} className="list-group-item">
-              {student.firstName} {student.lastName} - {student.email}
+              ({student.rollNumber}) {student.firstName} {student.lastName} - {student.email}
             </div>
           ))}
         </div>

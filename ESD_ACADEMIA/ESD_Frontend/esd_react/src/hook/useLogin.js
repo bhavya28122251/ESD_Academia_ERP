@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { loginUser } from "../model/authModel";
+import { loginUser } from "../util/loginutil";
 import { saveTokenToLocalStorage } from "../util/localStorageUtil";
 
 function useLogin(onLoginSuccess, navigate) {

@@ -1,0 +1,45 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   
+  padding: 10px 20px; /* Adjust padding as needed */
+  height: 60px; /* Navbar height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Keeps navbar above other content */
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo {
+  width: 100px; /* Small logo size */
+  height: 100px;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Logout button styles */
+.logout-button {
+  background-color:#f8f7fa; /* Button background */
+  color:#6f42c1; /* Text color */
+  border: 5px solid purple;
+  border-radius: 7px;
+  padding: 5px 10px;
+  font-size: 30px;
+  cursor: pointer;
+  width:200px;
+  height:70px;
+}
+
+.logout-button:hover {
+  background-color: purple; 
+  color:white/* Hover effect */
+}

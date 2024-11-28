@@ -1,7 +1,7 @@
 import React,{useEffect} from "react";
 import LoginCard from "../components/LoginCard.jsx"; // Importing the Login Card component
 import "../CSS/Login.css"; // Importing the CSS file
-import logo from '../images/Logo.png'
+import logo from '../assests/Logo.png'
 import { useNavigate } from "react-router-dom";
 import useLogin from "../hook/useLogin";
 import { getTokenFromLocalStorage } from "../util/localStorageUtil";

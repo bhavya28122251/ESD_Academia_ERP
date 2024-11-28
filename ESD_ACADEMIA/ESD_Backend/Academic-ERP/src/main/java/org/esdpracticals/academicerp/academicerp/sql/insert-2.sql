@@ -26,8 +26,13 @@ VALUES
     (9, 9),
     (10, 10),
     (1, 11),
-    (2, 12);
-
+    (2, 12),
+    (1,2),
+    (1,3),
+    (1,5),
+    (1,4),
+    (1,6),
+    (1,7);
 INSERT INTO Specialisation_Course (specialisation_id, course_id)
 VALUES
     (1, 1),
