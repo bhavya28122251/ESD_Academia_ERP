@@ -56,14 +56,15 @@ This mini-project is part of a larger academic management system and implements 
 3. Install dependencies using
    ```bash
    npm install
-4 .Start the server with
+4. Start the server with
   ```bash
   npm start
 
 ### Backtend
 1. Go to the `Academic-ERP` folder
 2. Open the project in IntelliJ IDEA or your preferred IDE
-3. Configure the database settings in the `application.properties` file 
+3. Configure the database settings in the `application.properties` file
+  ```bash
     -`spring.datasource.url=jdbc:mysql://localhost:3306/timetable`
     -`spring.datasource.username=your_db_username`
     -`spring.datasource.password=your_db_password`
