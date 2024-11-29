@@ -1,4 +1,4 @@
-package org.esdpracticals.academicerp.academicerp.djwt;
+package org.esdpracticals.academicerp.academicerp.jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -32,7 +32,7 @@ public class JwtHelper {
     private String createToken(Map<String, Object> claims) {
         return Jwts.builder()
                 .claims(claims)
-                .expiration(new Date(System.currentTimeMillis() + 1000 * 60))
+                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
                 .signWith(getSigningKey())
                 .compact();
     }

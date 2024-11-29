@@ -11,7 +11,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 @Component
 @RequiredArgsConstructor
 public class RequestInterceptor implements HandlerInterceptor {
-    private final org.esdpracticals.academicerp.academicerp.djwt.JwtHelper jwtHelper;
+    private final org.esdpracticals.academicerp.academicerp.jwt.JwtHelper jwtHelper;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws JwtException {
