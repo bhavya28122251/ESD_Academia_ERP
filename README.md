@@ -54,7 +54,7 @@ This mini-project is part of a larger academic management system and implements 
 1. Navigate to the esd_react directory.
 2. Install dependencies:  
    ```bash
-   npm run
+   npm install
 3. Start Frontend:  
    ```bash
    npm start
