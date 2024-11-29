@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import useStudentsDetails from '../hook/Studentshook';
 import '../CSS/StudentsDisplay.css';
+import Logout from '../components/Logout';
 
 const StudentsDisplay = () => {
   const { courseId } = useParams(); 
@@ -13,6 +14,7 @@ const StudentsDisplay = () => {
   return (
     <>
       <div className="header">
+        <Logout />
         <h1>Students Enrolled</h1>
         <div className="underline"></div>
       </div>
