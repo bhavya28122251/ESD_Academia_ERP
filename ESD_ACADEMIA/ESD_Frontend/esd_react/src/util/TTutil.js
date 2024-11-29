@@ -19,4 +19,3 @@ export const fetchTimetable = async () => {
     console.error("Error fetching timetable:", error);
   }
 };
-

@@ -1,24 +1,28 @@
-import { useState, useEffect } from 'react';
-import { fetchTimetable } from '../util/util';
 
-const useTimetable = () => {
-  const [timetableData, setTimetableData] = useState([]);
-  const [error, setError] = useState('');
+import { useEffect, useState } from 'react';
+import Student from '../model/Studentsmodel';
+import { fetchStudentsByCourse } from '../util/Studentsutil';
+
+const useStudentsDetails = (courseId) => {
+  const [students, setStudents] = useState([]);
+  const token = localStorage.getItem('jwtToken');
 
   useEffect(() => {
-    const loadTimetable = async () => {
-      try {
-        const data = await fetchTimetable();
-        setTimetableData(data);
-      } catch (err) {
-        setError('Failed to fetch timetable.');
-      }
+    const fetchStudents = async () => {
+
+      const studentsData = await fetchStudentsByCourse(courseId, token);
+      
+      const studentObjects = studentsData
+        .filter(student => student !== null && student !== undefined) 
+        .map(student => new Student(student.rollNumber, student.firstName, student.lastName, student.email));
+  
+      setStudents(studentObjects);
     };
 
-    loadTimetable();
-  }, []);
+    fetchStudents();
+  }, [courseId, token]);
 
-  return { timetableData, error };
+  return students;
 };
 
-export default useTimetable;
+export default useStudentsDetails;

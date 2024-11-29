@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
+
 @Component
 @RequiredArgsConstructor
 public class RequestInterceptor implements HandlerInterceptor {
@@ -16,12 +17,9 @@ public class RequestInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws JwtException {
         try {
             String authHeader = request.getHeader("Authorization");
-            if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-                response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
-                return false;
-            }
 
             String token = authHeader.substring(7);
+
             String role = jwtHelper.getRoleFromToken(token);
             Long userId = jwtHelper.getUserIdFromToken(token);
 
@@ -30,8 +28,7 @@ public class RequestInterceptor implements HandlerInterceptor {
 
             return true;
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            throw new JwtException("Unauthorized");
+            throw new JwtException("Invalid token");
         }
     }
 }

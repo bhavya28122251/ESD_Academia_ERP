@@ -25,6 +25,16 @@ const TimeTable = () => {
 
   if (error) return <div className="error">{error}</div>;
 
+  const dayNames = {
+    1: 'Monday',
+    2: 'Tuesday',
+    3: 'Wednesday',
+    4: 'Thursday',
+    5: 'Friday',
+    6: 'Saturday',
+    7: 'Sunday',
+  };
+
   const groupedData = timetableData.reduce((acc, item) => {
     const day = item.courseSchedule.day;
     if (!acc[day]) {
@@ -44,7 +54,7 @@ const TimeTable = () => {
       <div className="timetable-container">
         {Object.entries(groupedData).map(([day, lectures]) => (
           <div key={day} className="day-section">
-            <div className="day-header">{`Day ${day}`}</div>
+            <div className="day-header">{dayNames[day]}</div>
             {lectures.map((lecture, index) => (
               <TimeTableRow key={index} lecture={lecture} />
             ))}
