@@ -57,10 +57,10 @@ This mini-project is part of a larger academic management system and implements 
    ```bash
    npm install
 4. Start the server with
-  ```bash
+   ```bash
   npm start
 
-### Backtend
+ ### Backend
 1. Go to the `Academic-ERP` folder
 2. Open the project in IntelliJ IDEA or your preferred IDE
 3. Configure the database settings in the `application.properties` file
