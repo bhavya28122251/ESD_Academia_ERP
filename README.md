@@ -50,17 +50,23 @@ This mini-project is part of a larger academic management system and implements 
 - Spring Boot setup with Maven
 - A configured database
 
-### Frontend
-1. Navigate to the esd_react directory.
-2. Install dependencies:  
+  ### Frontend
+1. Clone the repository and navigate to the project directories. 
+2. For the frontend, go to the `esd_react` folder
+3. Install dependencies using
    ```bash
    npm install
-3. Start Frontend:  
-   ```bash
-   npm start
+4 .Start the server with
+  ```bash
+  npm start
 
 ### Backtend
-1. Navigate to the Academic-ERP directory.
-2. Install dependencies:  
-- Open this with Intellij IDEA
-3. Run the project
+1. Go to the `Academic-ERP` folder
+2. Open the project in IntelliJ IDEA or your preferred IDE
+3. Configure the database settings in the `application.properties` file 
+    -`spring.datasource.url=jdbc:mysql://localhost:3306/timetable`
+    -`spring.datasource.username=your_db_username`
+    -`spring.datasource.password=your_db_password`
+4. Finally, run the Spring Boot application through your IDE or use the command `./mvnw spring-boot:run`
+5. Access the frontend at `http://localhost:3000` and the backend APIs at `http://localhost:8080`.
+
