@@ -58,7 +58,7 @@ This mini-project is part of a larger academic management system and implements 
    npm install
 4. Start the server with
    ```bash
-  npm start
+   npm start
 
  ### Backend
 1. Go to the `Academic-ERP` folder
