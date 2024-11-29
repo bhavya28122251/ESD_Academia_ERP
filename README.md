@@ -16,7 +16,7 @@ This mini-project is part of a larger academic management system and implements 
 ---
 
 ## Tech Stack
-- **Frontend**: React, Bootstrap  
+- **Frontend**: React, Bootstrap,CSS
 - **Backend**: Spring Boot, JPA, Hibernate  
 - **Database**: MySQL  
 - **Authentication**: JWT Tokens  
@@ -26,14 +26,14 @@ This mini-project is part of a larger academic management system and implements 
 ## Project Structure
 
 ### Frontend (React)
-- **Directory**: `/faculty-timetable-frontend`
+- **Directory**: `/esd_react`
 - **Key Components**:
   - **Login**: Faculty authentication form.
-  - **Timetable**: Displays courses with specialization and room details.
+  - **Timetable**: Displays courses with time,specialization and room number.
   - **CourseDetails**: Shows students enrolled in a selected course.
 
 ### Backend (Spring Boot)
-- **Directory**: `/faculty-timetable-backend`
+- **Directory**: `/Academic_ERP`
 - **Key Layers**:
   - **Controller**: REST APIs for login, timetable, and enrolled students.
   - **Service**: Business logic for fetching and validating data.
@@ -45,11 +45,22 @@ This mini-project is part of a larger academic management system and implements 
 ## Setup Instructions
 
 ### Prerequisites
-- Install Node.js and npm.
-- Install JDK (Java Development Kit).
-- Install a MySQL database and configure schema.
+- Node.js and npm installed
+- Java Development Kit (JDK) installed
+- Spring Boot setup with Maven
+- A configured database
 
-### Frontend Setup
-1. Navigate to the `/faculty-timetable-frontend` directory:
+### Frontend
+1. Navigate to the esd_react directory.
+2. Install dependencies:  
+   ``bash
+   npm run
+3. Start Frontend:  
    ```bash
-   cd faculty-timetable-frontend
+   npm start
+
+### Backtend
+1. Navigate to the Academic-ERP directory.
+2. Install dependencies:  
+- Open this with Intellij IDEA
+3. Run the project
